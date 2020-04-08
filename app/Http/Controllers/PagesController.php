@@ -8,12 +8,15 @@ use Illuminate\Support\Facades\DB;
 //penghubung ke model
 use App\Structure;
 use App\Presiden;
+use App\Image;
 
 class PagesController extends Controller
 {
     public function index ()
     {
-        return view ('bem.welcome');
+
+        $images = Image::all();
+        return view ('bem/welcome', compact ('images'));
     }
 
     public function about ()
