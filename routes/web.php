@@ -41,3 +41,5 @@ Route::get('/crud/create', 'StrukturController@create');
 /*
 | End Kepengurusan
 |------------------------------------------------------------------------*/
+
+Route::get('/tes', 'TesController@index');
