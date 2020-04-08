@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2020 at 06:52 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Apr 08, 2020 at 10:53 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -45,6 +45,7 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `images` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `filename` varchar(13) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -54,8 +55,17 @@ CREATE TABLE `images` (
 -- Dumping data for table `images`
 --
 
-INSERT INTO `images` (`id`, `image`, `created_at`, `updated_at`) VALUES
-(64, 'strukturBEM.png', '2020-03-21 07:02:21', '2020-03-21 07:02:21');
+INSERT INTO `images` (`id`, `filename`, `image`, `created_at`, `updated_at`) VALUES
+(66, 'Struktur', 'strukturBEM.png', NULL, NULL),
+(67, 'Presiden dan ', 'pres-wapres.PNG', NULL, NULL),
+(68, 'Litbang', 'litbang.PNG', NULL, NULL),
+(69, 'Sekertaris', 'sekertaris.PNG', NULL, NULL),
+(70, 'Bendahara', 'bendahara.PNG', NULL, NULL),
+(71, 'Kewirausaan', 'kewirausaan.PNG', NULL, NULL),
+(72, 'Kominfo', 'kominfo.PNG', NULL, NULL),
+(73, 'Sosmas', 'sosmas.PNG', NULL, NULL),
+(74, 'Dalam Kampus', 'dalamkampus.PNG', NULL, NULL),
+(75, 'Luar Kampus', 'luarkampus.PNG', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -130,6 +140,29 @@ CREATE TABLE `tablebaru` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tes`
+--
+
+CREATE TABLE `tes` (
+  `id` int(11) NOT NULL,
+  `namafile` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tes`
+--
+
+INSERT INTO `tes` (`id`, `namafile`) VALUES
+(1, 'poqwer.png'),
+(2, 'addc.png'),
+(3, 'ascasc.jpg'),
+(4, 'jndfjnvd.jpg'),
+(5, 'asascadc.giv'),
+(6, 'sdaadc.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -185,6 +218,12 @@ ALTER TABLE `tablebaru`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tes`
+--
+ALTER TABLE `tes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -205,7 +244,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -224,6 +263,12 @@ ALTER TABLE `pres`
 --
 ALTER TABLE `tablebaru`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tes`
+--
+ALTER TABLE `tes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
