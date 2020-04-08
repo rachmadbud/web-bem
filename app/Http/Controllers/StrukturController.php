@@ -46,7 +46,7 @@ class StrukturController extends Controller
             'file' => 'required|image|mimes:jpeg,png,jpg|max:2048'
         ]);
 
-        $images->update($request->all());
+        // $images->update($request->all());
         if ($request->hasFile('file'))
         {
             $request->file('file')->move('images/', $request->file('file')->getClientOriginalName());
