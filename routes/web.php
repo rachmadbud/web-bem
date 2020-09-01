@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index');
 
 Route::get('/bem/welcome', 'PagesController@index');
 Route::get('/struktur/struktur', 'StrukturController@index'); //indexnya truktur
@@ -43,3 +41,7 @@ Route::get('/crud/create', 'StrukturController@create');
 |------------------------------------------------------------------------*/
 
 Route::get('/tes', 'TesController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
