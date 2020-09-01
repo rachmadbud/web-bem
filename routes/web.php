@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', function(){
+    return view ('guest.index');
+});
 
 Route::get('/bem/welcome', 'PagesController@index');
 Route::get('/struktur/struktur', 'StrukturController@index'); //indexnya truktur
