@@ -5,8 +5,8 @@
     
   @include('guest.component.navbar')
 
-
   @yield('content')
+
 
   @include('guest.component.footer')
 
