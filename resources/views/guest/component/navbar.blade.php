@@ -19,6 +19,7 @@
                   <li><a href="#">Informasi</a></li>
                 </ul>
               </li>
+              <li><a href="{{ url('simetri') }}">Pengurus</a></li>
 
             </ul>
           </nav><!-- .nav-menu -->

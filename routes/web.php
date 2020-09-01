@@ -37,6 +37,9 @@ Route::get('/crud/create', 'StrukturController@create');
 | Route Untuk Kepengurusan
 */
 
+Route::get('/simetri', function(){
+    return view ('guest.content.simetri');
+});
 
 /*
 | End Kepengurusan
