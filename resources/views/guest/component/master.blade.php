@@ -7,7 +7,6 @@
 
   @yield('content')
 
-
   @include('guest.component.footer')
 
   @include('guest.component.script')

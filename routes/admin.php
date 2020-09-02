@@ -5,4 +5,5 @@ Route::get('/',  function() {
 })->name('dashboard');
 
 Route::get('/kegiatan', 'Admin\KegiatanController@kegiatan');
-Route::get('/author/data', 'Admin\KegiatanController@data')->name('author.data');
+Route::get('/kegiatan/create', 'Admin\KegiatanController@create')->name('kegiatan.create');
+Route::post('/kegiatan/store', 'Admin\KegiatanController@store')->name('kegiatan.store');

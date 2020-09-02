@@ -20,4 +20,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   
   <!-- Data Table -->
   <link rel="stylesheet" href="{{ asset('admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+  
+  <!-- Editor -->
+  <link rel="stylesheet" href="{{ asset('admin-lte/plugins/summernote/summernote-bs4.css') }}">
 </head>

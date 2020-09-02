@@ -79,7 +79,7 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <div class="container">
+    <div class="">
       <h3>BEM FIK</h3>
       <p>Universitas Bandar Lampung</p>
       <div class="social-links">

@@ -13,5 +13,9 @@
 @stack('script')
 
 
+<script src="{{ asset('admin-lte/plugins/summernote/summernote-bs4.min.js') }}"></script>
+    @stack('script2')
+
+
 </body>
 </html>
