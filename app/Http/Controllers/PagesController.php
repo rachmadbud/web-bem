@@ -6,60 +6,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 //penghubung ke model
-use App\Structure;
-use App\Presiden;
-use App\Image;
+
+use App\Kegiatan;
 
 class PagesController extends Controller
 {
-    public function index ()
+    public function kegiatan()
     {
-
-        $images = Image::all();
-        return view ('bem/welcome', compact ('images'));
-    }
-
-    public function about ()
-    {
-        return view ('bem.about');
-    }
-
-    public function contact()
-    {
-        return view ('bem.contact');
-    }
-
-    public function struktur()
-    {
-        // database manual
-        // $struktur = DB::table('structure')->get();
-
-        //ini model yang gak default
-        // protected $table =('structure');
-        
-        return view ('struktur.struktur');
-    } 
-
-    public function editstruktur()
-    {
-        return view('crud.editstruktur');
-    }
-
-    public function create()
-    {
-        return view ('crud.create');
-    }
-
-    
-    public function tentang ()
-    {
-        return view ('about', ['nama' => 'Rachmad Budianto']);
-    }
-
-    public function presiden()
-    {
-        $image = DB::table('pres')->get();
-        return view ('struktur/pres',  ['image' => $image] );
+        $datas = Kegiatan::all();
+        return view('guest.kegiatan.kegiatan', compact('datas'));
     }
 
 }

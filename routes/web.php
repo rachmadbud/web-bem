@@ -36,11 +36,9 @@ Route::get('/crud/create', 'StrukturController@create');
 |--------------------------------------------------------------------------
 | Route Untuk Kepengurusan
 */
-
 Route::get('/simetri', function(){
     return view ('guest.content.simetri');
 });
-
 /*
 | End Kepengurusan
 |------------------------------------------------------------------------*/
@@ -50,3 +48,12 @@ Route::get('/tes', 'TesController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+|--------------------------------------------------------------------------
+| Route Untuk Kepengurusan
+*/
+Route::get('/galeri/kegiatan', 'PagesController@kegiatan');
+/*
+| End Kepengurusan
+|------------------------------------------------------------------------*/

@@ -14,7 +14,7 @@
               <li><a href="#contact">Contact</a></li>
               <li class="drop-down"><a href="">Galeri</a>
                 <ul>
-                  <li><a href="#">Kegiatan</a></li>
+                  <li><a href="{{ url('/galeri/kegiatan')}}">Kegiatan</a></li>
                   <li><a href="#">Berita</a></li>
                   <li><a href="#">Informasi</a></li>
                 </ul>
