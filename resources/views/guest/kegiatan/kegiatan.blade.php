@@ -10,7 +10,7 @@
         
         <div class="col-md-4 my-4">
           <div class="card mb-4 shadow-sm">
-            <img height="280" width="340" src="{{ asset('image-kegiatan/' . $data->foto )}}" alt="">
+            <img class="img-fluid" height="280" width="340" src="{{ asset('image-kegiatan/' . $data->foto )}}" alt="">
             <div class="card-body">
               <p class="card-text">{!! $data->caption !!}.</p>
               <div class="d-flex justify-content-between align-items-center">

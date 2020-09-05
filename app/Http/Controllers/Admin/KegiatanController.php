@@ -5,6 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Kegiatan;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class KegiatanController extends Controller
 {
@@ -53,7 +55,9 @@ class KegiatanController extends Controller
         }
 
         $data->save();
-        return 'data masuk';
+
+        Alert::success('Success', 'Data Berhasil Di Input');
+        return redirect ('admin/kegiatan');
     }
 
     /**

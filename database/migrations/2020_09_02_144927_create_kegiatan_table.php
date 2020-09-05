@@ -17,7 +17,7 @@ class CreateKegiatanTable extends Migration
             $table->bigIncrements('id');
             $table->string('judul');
             $table->string('foto');
-            $table->string('caption');
+            $table->text('caption');
             $table->timestamps();
         });
     }
