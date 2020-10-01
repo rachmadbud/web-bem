@@ -14,7 +14,11 @@
 
 
 <script src="{{ asset('admin-lte/plugins/summernote/summernote-bs4.min.js') }}"></script>
-    @stack('script2')
+
+@stack('script2')
+
+<!-- Fotawesome Pro CV BUD -->
+<script src="{{ asset('fa-pro/js/all.min.js') }}"></script>
 
 
 </body>

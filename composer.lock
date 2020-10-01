@@ -4,8 +4,36 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ac236521972c21fe6deed2bf8f4c7a30",
+    "content-hash": "f0fcf48f2d8feaa1b42f4785b2960b82",
     "packages": [
+        {
+            "name": "cv-bud/fa-pro",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrbudbud/fa-pro-cv_bud.git",
+                "reference": "aff1339c1fbfddf87ec4464a4f1362f4a19e3e20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrbudbud/fa-pro-cv_bud/zipball/aff1339c1fbfddf87ec4464a4f1362f4a19e3e20",
+                "reference": "aff1339c1fbfddf87ec4464a4f1362f4a19e3e20",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mrbudbud",
+                    "email": "rachmad.16421044@student.ubl.ac.id"
+                }
+            ],
+            "description": "fa pro for you",
+            "time": "2020-06-13T18:15:24+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",

@@ -52,28 +52,31 @@
                                 </li>
                             </ul>
                           </td>
-                          <td>{{$data->caption}}</td>
+                          <td>{!!$data->caption!!}</td>
                           <td>
-                            <a href="" class="btn btn-warning btn-sm">edit</a>
                             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
-                              <i class="fad fa-trash-alt"></i>
+                              <i class="fad fa-trash"></i>
                             </button>
                             <!-- Modal -->
                           <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Hapus...?</h5>
+                                  <h5 class="modal-title">Delete</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
+                                  <p>Yakin Hapus??.</p>
+                                </div>
+                                <div class="modal-body">
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <form method="POST" class="d-inline" action="karyawan//delete">
+                                  <form method="POST" class="d-inline" action="kegiatan/{{$data->id}}/delete ">
                                       @csrf
+                                      @method('DELETE')
                                       <input type="hidden" value="DELETE" name="_method">
                                       <input type="submit" value="Hapus" class="btn btn-danger btn-sm">
                                   </form>

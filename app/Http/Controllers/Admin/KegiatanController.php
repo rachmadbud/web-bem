@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Kegiatan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
@@ -102,7 +103,10 @@ class KegiatanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('kegiatan')->where('id', $id)->delete();
+
+        Alert::success('Success Title', 'Data Berhasil di Hapus');
+        return redirect('admin/kegiatan');
     }
 
     public function kegiatan()

@@ -18,9 +18,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   
+
   <!-- Data Table -->
   <link rel="stylesheet" href="{{ asset('admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
   
   <!-- Editor -->
   <link rel="stylesheet" href="{{ asset('admin-lte/plugins/summernote/summernote-bs4.css') }}">
+
+  <!-- Fontawesome Pro CV BUD -->
+  <link rel="stylesheet" href="{{ asset('fa-pro/css/all.min.css') }}">
 </head>
