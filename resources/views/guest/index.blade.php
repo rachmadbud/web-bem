@@ -9,7 +9,7 @@
         <div class="col-xl-8">
           <h1>BEM FIK</h1>
           <h2>Universitas Bandar Lampung</h2>
-          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          <a href="https://www.youtube.com/channel/UCx4h7WqSTybhV8_W4lrLn-w" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
         </div>
       </div>
     </div>
@@ -107,10 +107,7 @@
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              {{-- <li data-filter="*" class="filter-active">Semua</li> --}}
             </ul>
           </div>
         </div>

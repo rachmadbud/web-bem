@@ -51,9 +51,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 /*
 |--------------------------------------------------------------------------
-| Route Untuk Kepengurusan
+| Route Untuk kegiatan
 */
 Route::get('/galeri/kegiatan', 'PagesController@kegiatan');
+
 /*
-| End Kepengurusan
+| End Kegiatan
 |------------------------------------------------------------------------*/

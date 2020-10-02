@@ -48,7 +48,7 @@ class KegiatanController extends Controller
             $file = $request->file('file');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('image-kegiatan', $filename);
+            $file->move( public_path('image-kegiatan'), $filename);
             $data->foto = $filename;
         }else {
             return $request;
@@ -103,7 +103,9 @@ class KegiatanController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('kegiatan')->where('id', $id)->delete();
+        $data = Kegiatan::find($id);
+
+        $data->delete();
 
         Alert::success('Success Title', 'Data Berhasil di Hapus');
         return redirect('admin/kegiatan');

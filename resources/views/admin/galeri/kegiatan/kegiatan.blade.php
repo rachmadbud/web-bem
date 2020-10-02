@@ -54,36 +54,12 @@
                           </td>
                           <td>{!!$data->caption!!}</td>
                           <td>
-                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete">
-                              <i class="fad fa-trash"></i>
-                            </button>
-                            <!-- Modal -->
-                          <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title">Delete</h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <p>Yakin Hapus??.</p>
-                                </div>
-                                <div class="modal-body">
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <form method="POST" class="d-inline" action="kegiatan/{{$data->id}}/delete ">
-                                      @csrf
-                                      @method('DELETE')
-                                      <input type="hidden" value="DELETE" name="_method">
-                                      <input type="submit" value="Hapus" class="btn btn-danger btn-sm">
-                                  </form>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
+                            <button href="kegiatan/{{$data->id}}/delete" id="delete"><i class="fad fa-trash"></i></button>
+                            <form action="" method="post" id="deleteForm">
+                              @csrf
+                              @method("DELETE")
+                              <input type="submit" value="Hapus" class="btn btn-danger" style="display: none">
+                            </form>
                         </tr>
                       @endforeach
                     </tbody>
@@ -114,4 +90,40 @@
     });
   });
 </script>
+
+
+<!-- Delete Form -->
+<script>
+  $('button#delete').on('click', function(e){
+    e.preventDefault();
+    var href = $(this).attr('href');
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes'
+    }).then((result) => {
+      if (result.isConfirmed) {
+
+        document.getElementById('deleteForm').action = href;
+        document.getElementById('deleteForm').submit();
+        
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+    })
+  })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 @endpush
