@@ -36,7 +36,7 @@
                         </div>
                         <div class="card-body pad">
                             <div class="mb-1">
-                                <label for="exampleInputEmail1"><h1>Caption</h1></label>
+                                <label for=""><h1>Caption</h1></label>
                                 <textarea class="textarea" name="caption" placeholder="Place some text here"
                                     style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
                                 </textarea>
@@ -55,11 +55,6 @@
 @endsection
 
 @push('script2')
-<script>
-    $(function () {
-      // Summernote
-      $('.textarea').summernote()
-    })
-  </script>
+
 @endpush
 

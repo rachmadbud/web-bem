@@ -1,15 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Kegiatan;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use RealRashid\SweetAlert\Facades\Alert;
 
-
-class KegiatanController extends Controller
+class BeritaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +24,7 @@ class KegiatanController extends Controller
      */
     public function create()
     {
-        return view ('admin.galeri.kegiatan.create');
+        //
     }
 
     /**
@@ -39,26 +35,7 @@ class KegiatanController extends Controller
      */
     public function store(Request $request)
     {
-        $data = new Kegiatan;
-
-        $data->judul = $request->input('judul');
-        $data->caption = $request->input('caption');
-
-        if ($request->hasFile('file')) {
-            $file = $request->file('file');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extension;
-            $file->move( public_path('image-kegiatan'), $filename);
-            $data->foto = $filename;
-        }else {
-            return $request;
-            $data->image;
-        }
-
-        $data->save();
-
-        Alert::success('Success', 'Data Berhasil Di Input');
-        return redirect ('admin/kegiatan');
+        //
     }
 
     /**
@@ -103,17 +80,6 @@ class KegiatanController extends Controller
      */
     public function destroy($id)
     {
-        $data = Kegiatan::find($id);
-
-        $data->delete();
-
-        Alert::success('Success Title', 'Data Berhasil di Hapus');
-        return redirect('admin/kegiatan');
-    }
-
-    public function kegiatan()
-    {
-        $datas = Kegiatan::orderBy('created_at', 'desc')->get();
-        return view ('admin.galeri.kegiatan.kegiatan', compact('datas'));
+        //
     }
 }

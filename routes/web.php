@@ -54,7 +54,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 | Route Untuk kegiatan
 */
 Route::get('/galeri/kegiatan', 'PagesController@kegiatan');
+Route::get('/galeri/kegiatan/detail/{data}', 'PagesController@detail')->name('kegiatan.detail');
 
 /*
 | End Kegiatan
+|------------------------------------------------------------------------*/
+/*
+
+
+|--------------------------------------------------------------------------
+| Route Untuk Berita
+*/
+
+/*
+| End Berita
 |------------------------------------------------------------------------*/

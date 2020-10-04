@@ -10,7 +10,7 @@
 
           <nav class="nav-menu d-none d-lg-block">
             <ul>
-              <li class="active"><a href="{{ url('/')}}">Home</a></li>
+              <li><a href="{{ url('/')}}">Home</a></li>
               <li><a href="#contact">Contact</a></li>
               <li class="drop-down"><a href="">Galeri</a>
                 <ul>

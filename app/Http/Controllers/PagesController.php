@@ -13,8 +13,13 @@ class PagesController extends Controller
 {
     public function kegiatan()
     {
-        $datas = Kegiatan::all();
+        $datas = Kegiatan::orderBy('created_at', 'desc')->get();
         return view('guest.kegiatan.kegiatan', compact('datas'));
+    }
+
+    public function detail(Kegiatan $data)
+    {
+        return view ('guest.kegiatan.detail', compact('data'));
     }
 
 }
