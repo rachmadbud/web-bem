@@ -13,7 +13,7 @@
             <div class="title">
               <center><h2>{{Str::limit($data->judul, 20)}}</h2></center>
             </div>
-            <img class="img-fluid" style="width:400px;height:280px;" src="{{ $data->foto }}" alt="">
+            <img class="img-fluid" style="width:400px;height:280px;" src="{{ asset('image-kegiatan/'. $data->foto )}}" alt="">
             <div class="card-body">
               <p class="card-text">{{ Str::limit($data->caption, 100) }}.</p>
               <div class="d-flex justify-content-between align-items-center">

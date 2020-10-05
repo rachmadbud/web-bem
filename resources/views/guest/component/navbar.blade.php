@@ -15,7 +15,7 @@
               <li class="drop-down"><a href="">Galeri</a>
                 <ul>
                   <li><a href="{{ url('/galeri/kegiatan')}}">Kegiatan</a></li>
-                  <li><a href="#">Berita</a></li>
+                  <li><a href="{{ url('/galeri/berita')}}">Berita</a></li>
                   <li><a href="#">Informasi</a></li>
                 </ul>
               </li>

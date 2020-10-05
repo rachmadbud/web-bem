@@ -65,7 +65,8 @@ Route::get('/galeri/kegiatan/detail/{data}', 'PagesController@detail')->name('ke
 |--------------------------------------------------------------------------
 | Route Untuk Berita
 */
-
+Route::get('/galeri/berita', 'PagesController@berita');
+Route::get('/galeri/berita/detail/{data}', 'PagesController@detailberita')->name('berita.detail');
 /*
 | End Berita
 |------------------------------------------------------------------------*/

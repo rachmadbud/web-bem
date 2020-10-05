@@ -17,5 +17,8 @@ Route::delete('/kegiatan/{id}/delete', 'Admin\KegiatanController@destroy')->name
 /**
  * Route Kegiatan
  */
-Route::get('/berita', 'Admin\BeritaController@index')->name('berita');
+Route::get('/berita', 'Admin\BeritaController@index')->name('berita.index');
+Route::get('/berita/create', 'Admin\BeritaController@create')->name('berita.create');
+Route::post('/berita/store', 'Admin\BeritaController@store')->name('berita.store');
+Route::delete('/berita/{id}/delete', 'Admin\BeritaController@destroy')->name('berita.destroy');
 /** End Route Kegiatan */

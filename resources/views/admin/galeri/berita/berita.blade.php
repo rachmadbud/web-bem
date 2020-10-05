@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Data</h1>
+            <h1 class="m-0 text-dark">Beita</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -23,11 +23,11 @@
     
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">DataTable with default features</h3>
+                  <h3 class="card-title">Data Berita BEM</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <a href="" class="btn btn-primary">Tambah</a>
+                  <a href="{{route ('admin.berita.create')}} " class="btn btn-primary">Tambah</a>
                   <table id="example2" class="table table-bordered table-striped">
                     <thead>
                     <tr>
@@ -54,7 +54,7 @@
                           </td>
                           <td>{!!$data->caption!!}</td>
                           <td>
-                            <button href="kegiatan/{{$data->id}}/delete" id="delete"><i class="fad fa-trash"></i></button>
+                            <button href="berita/{{$data->id}}/delete" id="delete"><i class="fad fa-trash"></i></button>
                             <form action="" method="post" id="deleteForm">
                               @csrf
                               @method("DELETE")

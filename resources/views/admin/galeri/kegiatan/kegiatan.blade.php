@@ -48,7 +48,7 @@
                           <td>
                             <ul class="list-inline">
                                 <li class="list-inline-item center">
-                                    <img alt="Avatar" class="table-avatar" widht="50" height="50" src="{{ asset('image-kegiatan/' . $data->foto )}}">
+                                    <img alt="Avatar" class="table-avatar" widht="50" height="50" src="{{ asset('image-kegiatan/'. $data->foto )}}">
                                 </li>
                             </ul>
                           </td>

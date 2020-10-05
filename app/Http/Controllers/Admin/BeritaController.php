@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Berita;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class BeritaController extends Controller
 {
@@ -26,7 +27,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin.galeri.berita.create');
     }
 
     /**
@@ -37,7 +38,26 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Berita;
+
+        $data->judul = $request->input('judul');
+        $data->caption = $request->input('caption');
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move( public_path('image-kegiatan'), $filename);
+            $data->foto = $filename;
+        }else {
+            return $request;
+            $data->image;
+        }
+
+        $data->save();
+
+        Alert::success('Success', 'Data Berhasil Di Input');
+        return redirect()->route('admin.berita.index');
     }
 
     /**
@@ -82,6 +102,11 @@ class BeritaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Berita::find($id);
+
+        $data->delete();
+
+        Alert::success('Success Title', 'Data Berhasil di Hapus');
+        return redirect('admin/berita');
     }
 }
