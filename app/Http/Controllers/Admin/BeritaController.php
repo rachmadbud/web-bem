@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Berita;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        //
+        $datas = Berita::orderBy('created_at', 'desc')->get();
+        return view ('admin.galeri.berita.berita', compact('datas'));
     }
 
     /**
